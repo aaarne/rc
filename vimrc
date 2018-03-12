@@ -3,6 +3,8 @@ syntax on
 set ignorecase
 set wildmenu
 
+map f :!/usr/bin/fish<CR> <CR>
+
 au FileType tex map b :wall <bar> !latexmk<CR><CR>
 au FileType tex map t :VimtexTocOpen<CR>
 au FileType tex set spell
