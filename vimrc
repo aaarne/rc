@@ -3,7 +3,7 @@ syntax on
 set ignorecase
 set wildmenu
 
-au FileType tex map b :wall <bar> !latexmk<CR><CR>
+au FileType tex map b :wall <bar> !latexmk -pv<CR><CR>
 au FileType tex map t :VimtexTocOpen<CR>
 au FileType tex set spell
 
