@@ -8,6 +8,8 @@ map N :cn<CR>
 set guioptions-=T
 set guioptions-=m
 
+set mouse=
+
 au FileType tex map b :wall <bar> !latexmk -pv<CR><CR>
 au FileType tex map t :VimtexTocOpen<CR>
 au FileType tex set spell
