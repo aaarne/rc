@@ -20,6 +20,8 @@ au FileType python set expandtab
 au FileType scala set softtabstop=2
 au FileType sbt set softtabstop=2
 
+filetype plugin on
+
 highlight LineNr ctermfg=darkgrey
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -33,6 +35,5 @@ call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
-Plug 'suan/vim-instant-markdown'
 " ------------- to here -----------------
 call plug#end()
