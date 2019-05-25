@@ -5,6 +5,9 @@ set wildmenu
 map f :!/usr/bin/fish<CR> <CR>
 map N :cn<CR>
 
+set guioptions-=T
+set guioptions-=m
+
 au FileType tex map b :wall <bar> !latexmk -pv<CR><CR>
 au FileType tex map t :VimtexTocOpen<CR>
 au FileType tex set spell
@@ -13,6 +16,9 @@ au FileType python set tabstop=4
 au FileType python set smartindent
 au FileType python set shiftwidth=4
 au FileType python set expandtab
+
+au FileType scala set softtabstop=2
+au FileType sbt set softtabstop=2
 
 highlight LineNr ctermfg=darkgrey
 
@@ -27,5 +33,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
+Plug 'suan/vim-instant-markdown'
 " ------------- to here -----------------
 call plug#end()
