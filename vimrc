@@ -6,7 +6,6 @@ map f :!/usr/bin/fish<CR> <CR>
 map N :cn<CR>
 
 set guioptions-=T
-set guioptions-=m
 
 set mouse=
 
