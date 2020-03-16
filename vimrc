@@ -37,5 +37,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
+Plug 'https://github.com/cocopon/iceberg.vim.git'
+Plug 'dracula/vim', { 'as': 'dracula' }
 " ------------- to here -----------------
 call plug#end()
+
+colorscheme iceberg
