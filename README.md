@@ -3,5 +3,5 @@ My vim configuration
 
 # Usage
 
-overwrite/append `~/.vimrc` and call `:PlugInstall` once.
+create symlink from `~/.vimrc` to `vimrc` in this repo and call `:PlugInstall` once. Done.
 
