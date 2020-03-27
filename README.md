@@ -8,6 +8,7 @@ ln -sr vimrc ~/.vimrc
 ln -sr tmux-config/.tmux.conf ~/.tmux.conf
 ln -sr config.sway ~/.config/sway/config
 ln -sr config.fish ~/.config/fish/config.fish
+ln -sr redshift.conf ~/.config/redshift/redshift.conf
 ```
 
 ## vim
