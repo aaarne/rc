@@ -2,7 +2,8 @@
 My personal configuration files for my standard tools on linux
 
 ```bash
-cd this_repo
+git clone --recursive https://github.com/aaarne/rc.git
+cd rc
 ln -sr vimrc ~/.vimrc 
 ln -sr tmux-config/.tmux.conf ~/.tmux.conf
 ln -sr config.sway ~/.config/sway/config
