@@ -1,7 +1,7 @@
-# vimcfg
-My vim configuration
+# RC files
+My personal configuration files for my standard tools on linux
 
-# Usage
+## vim
 
 create symlink from `~/.vimrc` to `vimrc` in this repo and call `:PlugInstall` once. Done.
 
