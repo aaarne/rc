@@ -8,10 +8,13 @@ source /usr/share/autojump/autojump.fish
 # Fuck
 thefuck --alias | source
 
+bass source ~/.bashrc
+
 alias l='ll'
 alias lx='latexmk'
 alias p='python'
 alias ipy='ipython'
+alias ink='inkscape'
 
 # git aliases
 alias add='git add'
@@ -28,6 +31,10 @@ alias cdl='cd ~/git'
 alias tmux='tmux -u'
 alias pad='pueue add --'
 alias pst='pueue status'
+
+function makelist
+	make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}'
+end
 
 function c
 	cd $argv
@@ -48,6 +55,7 @@ set -x TF_CPP_MIN_LOG_LEVEL 3
 set -x LN_PREFIX /usr/local
 set -x LD_LIBRARY_PATH $LN_PREFIX/lib $LD_LIBRARY_PATH
 set -x PYTHONPATH $LN_PREFIX/lib/python2.7/site-packages $PYTHONPATH
+#set -x CMAKE_GENERATOR Ninja
 
 function concat_stapler
     echo cat

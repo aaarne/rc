@@ -31,13 +31,18 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:switch_mapping = "-"
+
 call plug#begin('~/.vim/plugged')
 " --------- Plugins from here -----------
 Plug 'lervag/vimtex'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'https://github.com/cocopon/iceberg.vim.git'
+Plug 'https://github.com/gregjurman/vim-nc.git'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'https://github.com/sirtaj/vim-openscad'
+Plug 'https://github.com/AndrewRadev/switch.vim'
 " ------------- to here -----------------
 call plug#end()
 
