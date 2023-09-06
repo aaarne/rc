@@ -5,6 +5,8 @@ set ignorecase
 set wildmenu
 map f :!/usr/bin/fish<CR> <CR>
 
+nnoremap <C-a> <C-w>
+
 set guioptions-=T
 
 set mouse=
@@ -43,7 +45,19 @@ Plug 'https://github.com/gregjurman/vim-nc.git'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'https://github.com/sirtaj/vim-openscad'
 Plug 'https://github.com/AndrewRadev/switch.vim'
+Plug 'tpope/vim-surround'
 " ------------- to here -----------------
 call plug#end()
 
 colorscheme iceberg
+
+augroup latexSurround
+  autocmd!
+  autocmd FileType tex call s:latexSurround()
+augroup END 
+
+function! s:latexSurround()
+  let b:surround_{char2nr("e")}
+    \ = "\\begin{\1environment: \1}\n\t\r\n\\end{\1\1}"
+  let b:surround_{char2nr("c")} = "\\\1command: \1{\r}"
+endfunction

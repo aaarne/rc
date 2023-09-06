@@ -15,6 +15,7 @@ alias lx='latexmk'
 alias p='python'
 alias ipy='ipython'
 alias ink='inkscape'
+alias z='zathura'
 
 # git aliases
 alias add='git add'
@@ -31,6 +32,7 @@ alias cdl='cd ~/git'
 alias tmux='tmux -u'
 alias pad='pueue add --'
 alias pst='pueue status'
+alias shitsoftware='matlab'
 
 function makelist
 	make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}'
@@ -39,6 +41,10 @@ end
 function c
 	cd $argv
 	ll
+end
+
+function z
+	zathura --fork $argv
 end
 
 set -gx SHELL /usr/bin/fish
@@ -95,3 +101,10 @@ function append
         mv temp.pdf $argv[1]
 end
 
+function h264
+	ffmpeg -i $argv[1] -vcodec h264 -crf 28 $argv[2]
+end
+
+function svg2pdf
+	inkscape --export-pdf=(string replace ".svg" ".pdf" $argv[1]) --export-latex $argv[1]
+end
